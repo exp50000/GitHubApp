@@ -19,6 +19,15 @@
 		793DD24124792EFA00211612 /* MainViewOutlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD24024792EFA00211612 /* MainViewOutlet.swift */; };
 		793DD24324792F0700211612 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD24224792F0700211612 /* MainViewModel.swift */; };
 		793DD2452479375100211612 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD2442479375100211612 /* UIColor+Extension.swift */; };
+		793DD24A247AE37600211612 /* ModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD249247AE37600211612 /* ModelBase.swift */; };
+		793DD24E247AE4F200211612 /* UsersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD24D247AE4F200211612 /* UsersRouter.swift */; };
+		793DD250247AE55300211612 /* APIRouterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD24F247AE55300211612 /* APIRouterHelper.swift */; };
+		793DD252247AE5A000211612 /* BaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD251247AE5A000211612 /* BaseConfig.swift */; };
+		793DD254247AF38F00211612 /* UsersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD253247AF38F00211612 /* UsersManager.swift */; };
+		793DD257247AF41D00211612 /* AllUsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD256247AF41D00211612 /* AllUsersModel.swift */; };
+		793DD259247AF5AB00211612 /* Alamofire+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD258247AF5AA00211612 /* Alamofire+Extension.swift */; };
+		793DD25D247B00B500211612 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD25C247B00B500211612 /* Enums.swift */; };
+		793DD25F247B055A00211612 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD25E247B055A00211612 /* NSObject+Extension.swift */; };
 		E2ADA305859317547A272272 /* libPods-GitHubApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB331FE2462103E67197A97 /* libPods-GitHubApp.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +48,15 @@
 		793DD24024792EFA00211612 /* MainViewOutlet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewOutlet.swift; sourceTree = "<group>"; };
 		793DD24224792F0700211612 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		793DD2442479375100211612 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		793DD249247AE37600211612 /* ModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBase.swift; sourceTree = "<group>"; };
+		793DD24D247AE4F200211612 /* UsersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRouter.swift; sourceTree = "<group>"; };
+		793DD24F247AE55300211612 /* APIRouterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouterHelper.swift; sourceTree = "<group>"; };
+		793DD251247AE5A000211612 /* BaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConfig.swift; sourceTree = "<group>"; };
+		793DD253247AF38F00211612 /* UsersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersManager.swift; sourceTree = "<group>"; };
+		793DD256247AF41D00211612 /* AllUsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersModel.swift; sourceTree = "<group>"; };
+		793DD258247AF5AA00211612 /* Alamofire+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Extension.swift"; sourceTree = "<group>"; };
+		793DD25C247B00B500211612 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		793DD25E247B055A00211612 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		9F6E289F78F78E73716B4E3A /* Pods-GitHubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubApp.debug.xcconfig"; path = "Target Support Files/Pods-GitHubApp/Pods-GitHubApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				793DD2362479190200211612 /* Network */,
+				793DD248247AE35400211612 /* Model */,
 				793DD234247918EF00211612 /* View */,
 				793DD235247918F400211612 /* ViewController */,
 				793DD233247918E700211612 /* ViewModel */,
@@ -123,6 +142,11 @@
 		793DD2362479190200211612 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				793DD25C247B00B500211612 /* Enums.swift */,
+				793DD24F247AE55300211612 /* APIRouterHelper.swift */,
+				793DD246247ABFE300211612 /* Router */,
+				793DD247247ABFED00211612 /* Manager */,
+				793DD251247AE5A000211612 /* BaseConfig.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -131,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				793DD2442479375100211612 /* UIColor+Extension.swift */,
+				793DD258247AF5AA00211612 /* Alamofire+Extension.swift */,
+				793DD25E247B055A00211612 /* NSObject+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -155,6 +181,31 @@
 				793DD23E24792EE400211612 /* UserCellViewModel.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		793DD246247ABFE300211612 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				793DD24D247AE4F200211612 /* UsersRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		793DD247247ABFED00211612 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				793DD253247AF38F00211612 /* UsersManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		793DD248247AE35400211612 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				793DD249247AE37600211612 /* ModelBase.swift */,
+				793DD256247AF41D00211612 /* AllUsersModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DAB5FAC56AA5A76B991E6624 /* Frameworks */ = {
@@ -264,12 +315,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				793DD24324792F0700211612 /* MainViewModel.swift in Sources */,
+				793DD259247AF5AB00211612 /* Alamofire+Extension.swift in Sources */,
 				793DD23C24792ECC00211612 /* UserCell.swift in Sources */,
 				793DD23F24792EE400211612 /* UserCellViewModel.swift in Sources */,
+				793DD254247AF38F00211612 /* UsersManager.swift in Sources */,
+				793DD24E247AE4F200211612 /* UsersRouter.swift in Sources */,
+				793DD252247AE5A000211612 /* BaseConfig.swift in Sources */,
+				793DD257247AF41D00211612 /* AllUsersModel.swift in Sources */,
 				793DD2242479184400211612 /* MainViewController.swift in Sources */,
+				793DD24A247AE37600211612 /* ModelBase.swift in Sources */,
 				793DD2202479184400211612 /* AppDelegate.swift in Sources */,
 				793DD24124792EFA00211612 /* MainViewOutlet.swift in Sources */,
+				793DD250247AE55300211612 /* APIRouterHelper.swift in Sources */,
+				793DD25F247B055A00211612 /* NSObject+Extension.swift in Sources */,
 				793DD2222479184400211612 /* SceneDelegate.swift in Sources */,
+				793DD25D247B00B500211612 /* Enums.swift in Sources */,
 				793DD2452479375100211612 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

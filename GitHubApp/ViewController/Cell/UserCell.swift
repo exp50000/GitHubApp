@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class UserCell: UITableViewCell {
 
@@ -40,6 +41,10 @@ extension UserCell {
     
     func configure(viewModel: UserCellViewModel) {
         
+        self.viewModel = viewModel
         
+        avatarImageView.sd_setImage(with: viewModel.photoURL)
+        nameLabel.text = viewModel.name
+        staffLabel.isHidden = !viewModel.isSiteAdmin
     }
 }

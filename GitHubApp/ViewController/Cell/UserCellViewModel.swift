@@ -12,6 +12,16 @@ import Foundation
 
 class UserCellViewModel {
     
+    var name: String = ""
+    
+    var photoURL: URL?
+    
+    var isSiteAdmin: Bool = false
     
     
+    init(user: AllUsersModel) {
+        name = user.login ?? ""
+        photoURL = URL(string: user.avatar_url ?? "")
+        isSiteAdmin = user.site_admin == true
+    }
 }
