@@ -16,9 +16,11 @@ class MainViewOutlet: NSObject {
             setupTableView()
         }
     }
+    
 }
 
 
+// MARK: - Navigation Bar
 extension MainViewOutlet {
     
     func setupNavigationBar(_ navbar: UINavigationBar?) {
@@ -31,6 +33,41 @@ extension MainViewOutlet {
 }
 
 
+extension MainViewOutlet {
+    
+    func startFetching() {
+        tableView.tableFooterView = {
+            let result = UIActivityIndicatorView(style: .white)
+            result.frame.size.height = 60
+            result.startAnimating()
+            return result
+        }()
+    }
+    
+    func finishFetching() {
+        tableView.tableFooterView = nil
+    }
+}
+
+extension MainViewOutlet {
+    
+    func startLoading() {
+        tableView.backgroundView = {
+            let result = UIActivityIndicatorView(style: .white)
+            result.startAnimating()
+            return result
+        }()
+    }
+    
+    func finishLoading() {
+        tableView.backgroundView = nil
+    }
+    
+    func finishLoadingWithError() {
+        
+    }
+}
+
 private extension MainViewOutlet {
     
     func setupTableView() {
@@ -38,3 +75,6 @@ private extension MainViewOutlet {
         tableView.register(nib, forCellReuseIdentifier: "Cell")
     }
 }
+
+
+

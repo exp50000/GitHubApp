@@ -28,6 +28,7 @@
 		793DD259247AF5AB00211612 /* Alamofire+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD258247AF5AA00211612 /* Alamofire+Extension.swift */; };
 		793DD25D247B00B500211612 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD25C247B00B500211612 /* Enums.swift */; };
 		793DD25F247B055A00211612 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD25E247B055A00211612 /* NSObject+Extension.swift */; };
+		794DC5DB247C2E20006CD777 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794DC5DA247C2E20006CD777 /* ErrorResponse.swift */; };
 		E2ADA305859317547A272272 /* libPods-GitHubApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB331FE2462103E67197A97 /* libPods-GitHubApp.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		793DD258247AF5AA00211612 /* Alamofire+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Extension.swift"; sourceTree = "<group>"; };
 		793DD25C247B00B500211612 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		793DD25E247B055A00211612 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		794DC5DA247C2E20006CD777 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		9F6E289F78F78E73716B4E3A /* Pods-GitHubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubApp.debug.xcconfig"; path = "Target Support Files/Pods-GitHubApp/Pods-GitHubApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +206,7 @@
 			children = (
 				793DD249247AE37600211612 /* ModelBase.swift */,
 				793DD256247AF41D00211612 /* AllUsersModel.swift */,
+				794DC5DA247C2E20006CD777 /* ErrorResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				793DD250247AE55300211612 /* APIRouterHelper.swift in Sources */,
 				793DD25F247B055A00211612 /* NSObject+Extension.swift in Sources */,
 				793DD2222479184400211612 /* SceneDelegate.swift in Sources */,
+				794DC5DB247C2E20006CD777 /* ErrorResponse.swift in Sources */,
 				793DD25D247B00B500211612 /* Enums.swift in Sources */,
 				793DD2452479375100211612 /* UIColor+Extension.swift in Sources */,
 			);
