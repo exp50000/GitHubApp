@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7906386C247D8490006FED60 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7906386B247D8490006FED60 /* BaseViewController.swift */; };
+		7906386E247D8C15006FED60 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7906386D247D8C15006FED60 /* UINavigationController+Extension.swift */; };
 		793DD2202479184400211612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD21F2479184400211612 /* AppDelegate.swift */; };
 		793DD2222479184400211612 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD2212479184400211612 /* SceneDelegate.swift */; };
 		793DD2242479184400211612 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793DD2232479184400211612 /* MainViewController.swift */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		3DB331FE2462103E67197A97 /* libPods-GitHubApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHubApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44B91D984771D5C57DFCDCA7 /* Pods-GitHubApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubApp.release.xcconfig"; path = "Target Support Files/Pods-GitHubApp/Pods-GitHubApp.release.xcconfig"; sourceTree = "<group>"; };
+		7906386B247D8490006FED60 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7906386D247D8C15006FED60 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		793DD21C2479184400211612 /* GitHubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		793DD21F2479184400211612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		793DD2212479184400211612 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 		793DD235247918F400211612 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7906386B247D8490006FED60 /* BaseViewController.swift */,
 				794DC5DC247C372F006CD777 /* MainViewController */,
 				794DC5DD247C3743006CD777 /* DetailViewController */,
 			);
@@ -157,10 +162,10 @@
 			isa = PBXGroup;
 			children = (
 				793DD25C247B00B500211612 /* Enums.swift */,
+				793DD251247AE5A000211612 /* BaseConfig.swift */,
 				793DD24F247AE55300211612 /* APIRouterHelper.swift */,
 				793DD246247ABFE300211612 /* Router */,
 				793DD247247ABFED00211612 /* Manager */,
-				793DD251247AE5A000211612 /* BaseConfig.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				793DD25E247B055A00211612 /* NSObject+Extension.swift */,
 				794DC5E2247C3B84006CD777 /* UIViewController+Extension.swift */,
 				79F9D731247CE9EA0031D76D /* UIImage+Extension.swift */,
+				7906386D247D8C15006FED60 /* UINavigationController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 				793DD23C24792ECC00211612 /* UserCell.swift in Sources */,
 				79F9D732247CE9EA0031D76D /* UIImage+Extension.swift in Sources */,
 				793DD23F24792EE400211612 /* UserCellViewModel.swift in Sources */,
+				7906386E247D8C15006FED60 /* UINavigationController+Extension.swift in Sources */,
 				793DD254247AF38F00211612 /* UsersManager.swift in Sources */,
 				793DD24E247AE4F200211612 /* UsersRouter.swift in Sources */,
 				793DD252247AE5A000211612 /* BaseConfig.swift in Sources */,
@@ -371,6 +378,7 @@
 				793DD250247AE55300211612 /* APIRouterHelper.swift in Sources */,
 				793DD25F247B055A00211612 /* NSObject+Extension.swift in Sources */,
 				793DD2222479184400211612 /* SceneDelegate.swift in Sources */,
+				7906386C247D8490006FED60 /* BaseViewController.swift in Sources */,
 				794DC5DB247C2E20006CD777 /* ErrorResponse.swift in Sources */,
 				794DC5E3247C3B84006CD777 /* UIViewController+Extension.swift in Sources */,
 				793DD25D247B00B500211612 /* Enums.swift in Sources */,
