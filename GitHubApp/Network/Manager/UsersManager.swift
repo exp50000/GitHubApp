@@ -39,4 +39,31 @@ class UsersManager {
             }
         }
     }
+    
+    class func GetSingleUser(
+        _ username: String,
+        completionHandler: @escaping (_ user: SingleUserModel?, _ error: ErrorResponse?) -> Void) {
+        
+        requestData(UsersRouter.getSingleUser(username: username)) { response in
+            var user: SingleUserModel?
+            var errorResponse: ErrorResponse?
+            defer { completionHandler(user, errorResponse) }
+            
+            switch response.result {
+            case .success(let data):
+                guard let response = SingleUserModel.decode(from: data) else {
+                    errorResponse = ErrorResponse.decode(from: data)
+                    return
+                }
+                
+                user = response
+                
+            case .failure(let error):
+                errorResponse = ErrorResponse()
+                errorResponse?.message = error.errorDescription
+                
+                print(error, terminator: "\n")
+            }
+        }
+    }
 }

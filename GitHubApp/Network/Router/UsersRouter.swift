@@ -13,6 +13,7 @@ import Alamofire
 enum UsersRouter: URLRequestConvertible, RequestRoutable {
     
     case getAllUsers(since: Int?)
+    case getSingleUser(username: String)
     
     
     var controllerName: String {
@@ -23,12 +24,14 @@ enum UsersRouter: URLRequestConvertible, RequestRoutable {
         switch self {
         case .getAllUsers:
             return ""
+        case .getSingleUser(let username):
+            return "/\(username)"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .getAllUsers:
+        default:
             return .get
         }
     }
@@ -43,6 +46,8 @@ enum UsersRouter: URLRequestConvertible, RequestRoutable {
             }
             
             return params
+        case .getSingleUser:
+            return nil
         }
     }
     

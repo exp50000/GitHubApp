@@ -26,6 +26,7 @@ class MainViewController: UIViewController {
         super.viewWillAppear(animated)
         
         viewOutlet.setupNavigationBar(navigationController?.navigationBar)
+        deselectTableViewSelectedRow()
     }
 }
 
@@ -47,7 +48,12 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        let cellViewModel = viewModel.userViewModels[indexPath.row]
+        
+        let viewController = DetailViewController.FromStoryboard("Main")
+        viewController.viewModel = DetailViewModel(username: cellViewModel.name)
+        viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -95,6 +101,14 @@ extension MainViewController {
             default:
                 self.viewOutlet.finishFetching()
             }
+        }
+    }
+}
+
+extension MainViewController {
+    func deselectTableViewSelectedRow() {
+        if let indexPath = viewOutlet.tableView.indexPathForSelectedRow {
+            viewOutlet.tableView.deselectRow(at: indexPath, animated: true)
         }
     }
 }
